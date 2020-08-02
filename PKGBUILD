@@ -13,7 +13,8 @@ depends=('zsh-autosuggestions'
 	'zsh-syntax-highlighting'
 	'zsh-completions'
 	'zsh-history-substring-search'
-	'zsh')
+	'zsh'
+	'pkgfile')
 source=("$pkgname.tar.gz::$url/archive/$_gitcommit.tar.gz")
 md5sums=('a697fb44fb2b9faaaa6a7d1be879cf2a')
 
