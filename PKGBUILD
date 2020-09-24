@@ -1,7 +1,7 @@
 # Maintainer: Chrysostomus @forum.manjaro.org
 
 pkgname=manjaro-zsh-config
-pkgver=0.15
+pkgver=0.16
 pkgrel=1
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
@@ -18,6 +18,7 @@ depends=('zsh-autosuggestions'
 source=("$pkgname.tar.gz::$url/archive/$_gitcommit.tar.gz")
 install=manjaro-zsh-config.install
 md5sums=('ae03d3862aa12fb891fcb3f2fdf127e5')
+NoUpgrade=(/root/.zshrc)
 
 package() {
 	cd ${srcdir}
