@@ -16,7 +16,7 @@ depends=('zsh-autosuggestions'
 	'zsh'
 	'pkgfile'
 	'nerd-fonts-noto-sans-mono'
-	'zsh-theme-powerline10k')
+	'zsh-theme-powerlevel10k')
 source=("$pkgname.tar.gz::$url/archive/$_gitcommit.tar.gz")
 md5sums=('6ba88cb35d0ac18ee791f2c37e36e8d1')
 backup=(root/.zshrc)
