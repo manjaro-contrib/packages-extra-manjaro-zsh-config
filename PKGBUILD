@@ -1,7 +1,7 @@
 # Maintainer: Chrysostomus @forum.manjaro.org
 
 pkgname=manjaro-zsh-config
-pkgver=0.17
+pkgver=0.18
 pkgrel=1
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
@@ -18,6 +18,7 @@ depends=('zsh-autosuggestions'
 	'nerd-fonts-noto-sans-mono'
 	'zsh-theme-powerlevel10k')
 source=("$pkgname.tar.gz::$url/archive/$_gitcommit.tar.gz")
+install=manjaro-zsh-config.install
 md5sums=('6ba88cb35d0ac18ee791f2c37e36e8d1')
 backup=(root/.zshrc)
 
