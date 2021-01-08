@@ -1,4 +1,5 @@
 # Maintainer: Chrysostomus @forum.manjaro.org
+# Maintainer: pheiduck @forum.manjaro.org
 
 pkgname=manjaro-zsh-config
 pkgver=0.18
