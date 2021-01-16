@@ -2,8 +2,8 @@
 # Developer: pheiduck @forum.manjaro.org
 
 pkgname=manjaro-zsh-config
-pkgver=0.21
-pkgrel=1
+pkgver=0.20
+pkgrel=2
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
 url="https://github.com/Chrysostomus/$pkgname"
