@@ -34,5 +34,5 @@ package() {
 	install -D -m640 $srcdir/$pkgname-$_gitcommit/rootzshrc ${pkgdir}/root/.zshrc
 	mkdir -p $pkgdir/usr/share/zsh/scripts
 	cp -r $srcdir/$pkgname-$_gitcommit/base16-shell $pkgdir/usr/share/zsh/scripts
-	chmod a+rwx,g-w,o-rwx $pkgdir/usr/share/zsh/scripts/base16-shell/*
+	chmod a+x $pkgdir/usr/share/zsh/scripts/base16-shell/*
 }
