@@ -2,12 +2,12 @@
 # Developer: pheiduck @forum.manjaro.org
 
 pkgname=manjaro-zsh-config
-pkgver=0.20
-pkgrel=4
+pkgver=0.21
+pkgrel=1
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
 url="https://github.com/Chrysostomus/$pkgname"
-_gitcommit=05888604a0fb5e27b8f15a5782c591e49e64788f
+_gitcommit=7253e5e6d3bb41fc75983603198a509dff39b004
 license=('MIT')
 conflicts=('grml-zsh-config')
 depends=('zsh-autosuggestions'
