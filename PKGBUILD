@@ -20,7 +20,7 @@ depends=('zsh-autosuggestions'
 	'zsh-theme-powerlevel10k')
 source=("$pkgname.tar.gz::$url/archive/$_gitcommit.tar.gz")
 install=manjaro-zsh-config.install
-sha256sums=('d45ebac8f0ae1b0a243e4765e1a234f4d6058d78e4829a442a8dbab80af931cf')
+sha256sums=('f459dc20c0b823268793be7501c4e06273d402cebe1cbf8e1f444f8e1827ee48')
 backup=(root/.zshrc)
 
 package() {
