@@ -8,7 +8,7 @@ pkgrel=3
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
-_gitcommit=b6990f0b78d7610c84f494395fc7889f9f8a1e34
+_gitcommit=08a33dc2f692462862d32c48931a28426e1ffc2a
 license=('MIT')
 conflicts=('grml-zsh-config')
 depends=('zsh-autosuggestions'
@@ -21,15 +21,8 @@ depends=('zsh-autosuggestions'
 	'zsh-theme-powerlevel10k')
 backup=(root/.zshrc)
 install="$pkgname.install"
-source=("$pkgname-$_gitcommit.tar.gz::$url/archive/$_gitcommit.tar.gz"
-        'https://github.com/Chrysostomus/manjaro-zsh-config/pull/31.patch')
-sha256sums=('c58cd6d9fb2a2b9a2cd51661129d824ed583d78915785481e765149d40db60bb'
-            'eaed56356bbe4d58db2c4cadc353616e256268e60c86d3abbba112bc6c6e315f')
-
-prepare() {
-  cd "$pkgname-$_gitcommit"
-  patch -Np1 -i ../31.patch
-}
+source=("$pkgname-$_gitcommit.tar.gz::$url/archive/$_gitcommit.tar.gz")
+sha256sums=('f5dc55f217503e55d0ffa45861171c562f7f67e3307398b78d1c7a2e05cd581a')
 
 package() {
 	cd "$pkgname-$_gitcommit"
