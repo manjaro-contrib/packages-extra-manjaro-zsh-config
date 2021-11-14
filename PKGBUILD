@@ -21,7 +21,7 @@ depends=('zsh-autosuggestions'
 	'zsh-theme-powerlevel10k')
 backup=(root/.zshrc)
 install="$pkgname.install"
-source=("$pkgname.tar.gz::$url/archive/$_gitcommit.tar.gz"
+source=("$pkgname-$_gitcommit.tar.gz::$url/archive/$_gitcommit.tar.gz"
         'https://github.com/Chrysostomus/manjaro-zsh-config/pull/30.patch')
 sha256sums=('f459dc20c0b823268793be7501c4e06273d402cebe1cbf8e1f444f8e1827ee48'
             'b7a775d368b4d850fc0b1c666681c9f1466d577f688a3bc92063f4dbe9ba1597')
