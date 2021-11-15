@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.21
-pkgrel=4
+pkgrel=5
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -33,7 +33,7 @@ package() {
 	install -D -m644 p10k.zsh -t "${pkgdir}/usr/share/zsh/"
 	install -D -m644 p10k-portable.zsh -t "${pkgdir}/usr/share/zsh/"
 	install -D -m644 command-not-found.zsh -t "${pkgdir}/usr/share/zsh/functions/"
-	install -D -m640 rootzshrc -t ${pkgdir}/root/.zshrc
+	install -D -m640 .zshrc -t "${pkgdir}/root/"
 	chmod 750 "${pkgdir}/root"
 	install -d "$pkgdir/usr/share/zsh/scripts"
 	cp -r base16-shell "$pkgdir/usr/share/zsh/scripts/"
