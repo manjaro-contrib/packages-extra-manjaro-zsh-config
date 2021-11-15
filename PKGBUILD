@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.21
-pkgrel=3
+pkgrel=4
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -30,7 +30,8 @@ package() {
 	install -D -m644 "$pkgname" -t "${pkgdir}/usr/share/zsh/"
 	install -D -m644 manjaro-zsh-prompt -t "${pkgdir}/usr/share/zsh"
 	install -D -m644 zsh-maia-prompt -t "${pkgdir}/usr/share/zsh/"
-	install -D -m644 p10k.zsh -t "${pkgdir}/usr/share/zsh/p10k.zsh"
+	install -D -m644 p10k.zsh -t "${pkgdir}/usr/share/zsh/"
+	install -D -m644 p10k-portable.zsh -t "${pkgdir}/usr/share/zsh/"
 	install -D -m644 command-not-found.zsh -t "${pkgdir}/usr/share/zsh/functions/"
 	install -D -m640 rootzshrc -t ${pkgdir}/root/.zshrc
 	chmod 750 "${pkgdir}/root"
