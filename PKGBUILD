@@ -3,12 +3,12 @@
 # Contributor: Roman Perepelitsa <roman.perepelitsa@gmail.com>
 
 pkgname=manjaro-zsh-config
-pkgver=0.22
-pkgrel=2
+pkgver=0.23
+pkgrel=1
 pkgdesc="Zsh configuration for manjaro"
 arch=(any)
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
-_gitcommit=737fba1290f15e8092b2c92dc78698d82a35c398
+_gitcommit=f6ce7fb89f6c8e56790a895522033d55598412e3
 license=('MIT')
 conflicts=('grml-zsh-config')
 depends=('zsh-autosuggestions'
@@ -22,7 +22,7 @@ depends=('zsh-autosuggestions'
 backup=(root/.zshrc)
 install="$pkgname.install"
 source=("$pkgname-$_gitcommit.tar.gz::$url/archive/$_gitcommit.tar.gz")
-sha256sums=('5e9ecd772cb73d34c2eb798db7007f1f63bdfb7c7c9a99022b735b46ac1adbcc')
+sha256sums=('a1abd8a48424c540b7cdb28a24790e1657d02e680791e43fdf80215c3d59f95f')
 
 package() {
 	cd "$pkgname-$_gitcommit"
