@@ -39,4 +39,5 @@ package() {
 	install -d "${pkgdir}/usr/share/zsh/scripts"
 	cp -r base16-shell "${pkgdir}/usr/share/zsh/scripts/"
 	chmod a+x "${pkgdir}/usr/share/zsh/scripts/base16-shell/"*
+	install -D -m644 LICENSE -t "${pkgdir}/usr/share/licenses/$pkgname/"
 }
