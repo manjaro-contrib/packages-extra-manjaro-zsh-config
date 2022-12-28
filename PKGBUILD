@@ -4,13 +4,11 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.24
-pkgrel=1
+pkgrel=2
 pkgdesc="Zsh configuration for manjaro"
-arch=(any)
+arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
-_gitcommit=4ab3924476ace65a7067c26cbd733a9d8608dcf4
 license=('MIT')
-conflicts=('grml-zsh-config')
 depends=('zsh-autosuggestions'
 	'zsh-syntax-highlighting'
 	'zsh-completions'
@@ -19,13 +17,16 @@ depends=('zsh-autosuggestions'
 	'pkgfile'
 	'nerd-fonts-noto-sans-mono'
 	'zsh-theme-powerlevel10k')
-backup=(root/.zshrc)
+makedepends=('git')
+conflicts=('grml-zsh-config')
+backup=('root/.zshrc')
 install="$pkgname.install"
-source=("$pkgname-$_gitcommit.tar.gz::$url/archive/$_gitcommit.tar.gz")
-sha256sums=('def56cbb129b5f5f96f873bb04c754ce0a648de7a9e538b59bd21b4aeaf9b7f8')
+_commit=f78870728445f3fb8b195fb7fb12cb3d5083c202
+source=("git+https://github.com/Chrysostomus/manjaro-zsh-config.git#commit=${_commit}")
+sha256sums=('SKIP')
 
 package() {
-	cd "$pkgname-$_gitcommit"
+	cd "$srcdir/$pkgname"
 	install -D -m644 .zshrc -t "${pkgdir}/etc/skel/"
 	install -D -m644 "$pkgname" -t "${pkgdir}/usr/share/zsh/"
 	install -D -m644 manjaro-zsh-prompt -t "${pkgdir}/usr/share/zsh"
@@ -35,7 +36,7 @@ package() {
 	install -D -m644 command-not-found.zsh -t "${pkgdir}/usr/share/zsh/functions/"
 	install -D -m640 .zshrc -t "${pkgdir}/root/"
 	chmod 750 "${pkgdir}/root"
-	install -d "$pkgdir/usr/share/zsh/scripts"
-	cp -r base16-shell "$pkgdir/usr/share/zsh/scripts/"
-	chmod a+x "$pkgdir/usr/share/zsh/scripts/base16-shell/"*
+	install -d "${pkgdir}/usr/share/zsh/scripts"
+	cp -r base16-shell "${pkgdir}/usr/share/zsh/scripts/"
+	chmod a+x "${pkgdir}/usr/share/zsh/scripts/base16-shell/"*
 }
