@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.24
-pkgrel=2
+pkgrel=3
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -15,7 +15,7 @@ depends=('zsh-autosuggestions'
 	'zsh-history-substring-search'
 	'zsh'
 	'pkgfile'
-	'nerd-fonts-noto-sans-mono'
+	'ttf-noto-nerd'
 	'zsh-theme-powerlevel10k')
 makedepends=('git')
 conflicts=('grml-zsh-config')
