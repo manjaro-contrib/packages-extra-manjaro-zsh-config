@@ -1,10 +1,10 @@
 # Maintainer: Chrysostomus <forum.manjaro.org>
-# Developer: pheiduck <forum.manjaro.org>
+# Contributor: pheiduck <forum.manjaro.org>
 # Contributor: Roman Perepelitsa <roman.perepelitsa@gmail.com>
 
 pkgname=manjaro-zsh-config
-pkgver=0.24
-pkgrel=3
+pkgver=0.25
+pkgrel=1
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -21,7 +21,7 @@ makedepends=('git')
 conflicts=('grml-zsh-config')
 backup=('root/.zshrc')
 install="$pkgname.install"
-_commit=f78870728445f3fb8b195fb7fb12cb3d5083c202
+_commit=a09dbc3f6bf22d553def64247b3529d9310c7b1f
 source=("git+https://github.com/Chrysostomus/manjaro-zsh-config.git#commit=${_commit}")
 sha256sums=('SKIP')
 
