@@ -22,7 +22,7 @@ conflicts=('grml-zsh-config')
 backup=('root/.zshrc')
 install="$pkgname.install"
 _commit=a09dbc3f6bf22d553def64247b3529d9310c7b1f
-source=("git+https://github.com/Chrysostomus/manjaro-zsh-config.git#commit=${_commit}")
+source=("git+${url}.git#commit=${_commit}")
 sha256sums=('SKIP')
 
 package() {
