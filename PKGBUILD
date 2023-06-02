@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.25
-pkgrel=2
+pkgrel=3
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -22,8 +22,14 @@ conflicts=('grml-zsh-config')
 backup=('root/.zshrc')
 install="$pkgname.install"
 _commit=a09dbc3f6bf22d553def64247b3529d9310c7b1f
-source=("git+${url}.git#commit=${_commit}")
+source=("git+${url}.git#commit=${_commit}"
+        '${url}/pull/42.patch')
 sha256sums=('SKIP')
+
+prepare() {
+  cd "$pkgname-$_gitcommit"
+  patch -Np1 -i ../42.patch
+}
 
 package() {
   cd "$srcdir/$pkgname"
