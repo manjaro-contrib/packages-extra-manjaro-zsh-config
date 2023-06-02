@@ -23,11 +23,12 @@ backup=('root/.zshrc')
 install="$pkgname.install"
 _commit=a09dbc3f6bf22d553def64247b3529d9310c7b1f
 source=("git+${url}.git#commit=${_commit}"
-        '${url}/pull/42.patch')
-sha256sums=('SKIP')
+        "${url}/pull/42.patch")
+sha256sums=('SKIP'
+            'f9b220ce31676c35ac403cdd8b7d5f2e21545355dd30138bccb4c1e8ee178e20')
 
 prepare() {
-  cd "$pkgname-$_gitcommit"
+  cd "$srcdir/$pkgname"
   patch -Np1 -i ../42.patch
 }
 
