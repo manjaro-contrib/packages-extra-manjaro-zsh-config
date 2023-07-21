@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.25
-pkgrel=3
+pkgrel=4
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -14,7 +14,6 @@ depends=('zsh-autosuggestions'
   'zsh-completions'
   'zsh-history-substring-search'
   'zsh'
-  'pkgfile'
   'ttf-meslo-nerd-font-powerlevel10k'
   'zsh-theme-powerlevel10k')
 makedepends=('git')
@@ -23,9 +22,11 @@ backup=('root/.zshrc')
 install="$pkgname.install"
 _commit=a09dbc3f6bf22d553def64247b3529d9310c7b1f
 source=("git+${url}.git#commit=${_commit}"
-        "${url}/pull/42.patch")
+        "${url}/pull/42.patch"
+        "${url}/pull/44.patch")
 sha256sums=('SKIP'
-            'f9b220ce31676c35ac403cdd8b7d5f2e21545355dd30138bccb4c1e8ee178e20')
+            'f9b220ce31676c35ac403cdd8b7d5f2e21545355dd30138bccb4c1e8ee178e20'
+            'ef33c8803cca33acdfb3b5653d12609c94fce08c23813afb53ca266c346053d4')
 
 prepare() {
   cd "$srcdir/$pkgname"
