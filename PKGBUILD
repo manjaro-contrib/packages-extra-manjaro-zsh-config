@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.25
-pkgrel=4
+pkgrel=5
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -20,17 +20,12 @@ makedepends=('git')
 conflicts=('grml-zsh-config')
 backup=('root/.zshrc')
 install="$pkgname.install"
-_commit=a09dbc3f6bf22d553def64247b3529d9310c7b1f
-source=("git+${url}.git#commit=${_commit}"
-        "${url}/pull/42.patch"
-        "${url}/pull/44.patch")
-sha256sums=('SKIP'
-            'f9b220ce31676c35ac403cdd8b7d5f2e21545355dd30138bccb4c1e8ee178e20'
-            'ef33c8803cca33acdfb3b5653d12609c94fce08c23813afb53ca266c346053d4')
+_commit=dd6630b80f74e33db3cb626dd9b191865bd6f287
+source=("git+${url}.git#commit=${_commit}")
+sha256sums=('SKIP')
 
 prepare() {
   cd "$srcdir/$pkgname"
-  patch -Np1 -i ../42.patch
 }
 
 package() {
@@ -41,7 +36,6 @@ package() {
   install -D -m644 zsh-maia-prompt -t "${pkgdir}/usr/share/zsh/"
   install -D -m644 p10k.zsh -t "${pkgdir}/usr/share/zsh/"
   install -D -m644 p10k-portable.zsh -t "${pkgdir}/usr/share/zsh/"
-  install -D -m644 command-not-found.zsh -t "${pkgdir}/usr/share/zsh/functions/"
   install -D -m640 .zshrc -t "${pkgdir}/root/"
   chmod 750 "${pkgdir}/root"
   install -d "${pkgdir}/usr/share/zsh/scripts"
