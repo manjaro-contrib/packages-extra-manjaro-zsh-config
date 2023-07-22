@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.25
-pkgrel=6
+pkgrel=8
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
