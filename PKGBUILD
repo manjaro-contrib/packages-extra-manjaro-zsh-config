@@ -21,7 +21,7 @@ conflicts=('grml-zsh-config')
 backup=('root/.zshrc')
 _commit=1f9d0da2c8408de895156cb65d324636d656df1c
 source=("git+${url}.git#commit=${_commit}")
-sha256sums=('SKIP')
+sha256sums=('6d814d5b216b380c4894214e19788d1057e4e6c684d5e897b2ff66366b4ab291')
 
 prepare() {
   cd "$srcdir/$pkgname"
