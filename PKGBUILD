@@ -4,7 +4,7 @@
 
 pkgname=manjaro-zsh-config
 pkgver=0.26
-pkgrel=2
+pkgrel=3
 pkgdesc="Zsh configuration for manjaro"
 arch=('any')
 url="https://github.com/Chrysostomus/manjaro-zsh-config"
@@ -28,7 +28,12 @@ prepare() {
 
   # Disable nordvpn
   # https://github.com/romkatv/powerlevel10k/issues/2860
-  sed -i 's/nordvpn/# nordvpn/g' p10k.zsh p10k-portable.zsh
+  sed -i 's/nordvpn\ \ /# nordvpn\ \ /g' p10k.zsh p10k-portable.zsh
+
+  # Trim down prompt when accepting a command line
+  # for easier copying and pasting terminal output
+  sed -i 's/POWERLEVEL9K_TRANSIENT_PROMPT=off/POWERLEVEL9K_TRANSIENT_PROMPT=always/g' \
+    p10k.zsh p10k-portable.zsh
 }
 
 package() {
